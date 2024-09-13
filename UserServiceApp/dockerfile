@@ -1,0 +1,9 @@
+FROM openjdk:17
+
+ARG JAR_FILE=target/*.jar
+
+COPY ${JAR_FILE} UserServiceApp.jar
+
+ENTRYPOINT [ "java", "-jar", "UserServiceApp.jar" ]
+
+EXPOSE 8085
